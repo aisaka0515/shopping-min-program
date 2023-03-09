@@ -1,0 +1,43 @@
+server:
+  port: 8000
+  servlet:
+    context-path: /
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db_java1234_mall_v3?serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+
+
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+  configuration:
+    map-underscore-to-camel-case: false
+    auto-mapping-behavior: full
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:mybatis/mapper/*.xml
+
+weixin:
+  jscode2sessionUrl: https://api.weixin.qq.com/sns/jscode2session
+  appid: wx4545f17a87031118
+  secret: 66a4c5940a8949775b517547b2657815
+
+#weixinpayconfig:
+#  appid: wx8397f8696b538317
+#  mch_id: 1473426802
+#  key: T6m9iK73b0kn9g5v426MKfHQH7X8rKwb
+#  url: https://api.mch.weixin.qq.com/pay/unifiedorder
+#  notify_url: https://0c56-180-121-172-30.ngrok.io/weixinpay/notifyUrl
+
+bigTypeImagesFilePath: F://work/大三下/Demo/images/bigTypeImgs/
+
+productImagesFilePath: F://work/大三下/Demo/images/productImgs/
+
+swiperImagesFilePath: F://work/大三下/Demo/images/swiperImgs/
+
+productSwiperImagesFilePath: F://work/大三下/Demo/images/productSwiperImgs/
